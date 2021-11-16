@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>PROJECT</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">FOREST</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="./projectimage/bird1.png" id="bird1">
+        <img src="./projectimage/bird2.png" id="bird2">
+        <img src="./projectimage/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="./projectimage/rocks.png" id="rocks">
+        <img src="./projectimage/water.png" id="water">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia reiciendis recusandae commodi eum vel voluptatibus atque provident ipsum neque, illum error eos tempora cum iure perferendis, nam ullam expedita quidem.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis nulla nesciunt velit sit atque laborum officia aliquam? Alias sapiente aut sed veritatis veniam doloribus, porro error nihil nesciunt! Id!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+           Quod nemo et praesentium dolore quibusdam quo molestiae ullam velit quia sequi debitis, soluta temporibus, placeat ipsam dolores aperiam deserunt expedita nesciunt!
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iste deserunt, reiciendis aliquam at, dolor quos excepturi eius ipsa eum nostrum culpa quia nesciunt voluptatem voluptas similique corporis non qui.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam distinctio itaque harum sed voluptates labore adipisci, voluptatibus odio doloribus esse dolores aut veritatis asperiores temporibus molestias voluptatem excepturi iusto tempora.
+        </p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let forest = document.getElementById('forest');
+        let rocks = document.getElementById('rocks');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            text.style.top = 50 +value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px'; 
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+    <div class="part">
+    <section id="hi">
+        <img src="./projectimage/bg.jpg" id="bg">
+        <img src="./projectimage/moon.png" id="moon">
+        <img src="./projectimage/mountain.png" id="mountain">
+        
+        <img src="./projectimage/road.png" id="road">
+        <h2 id="text1"><span>MOON LIGHT</span><br>Adventure</h2>
+    </section>
+     
+   <script >
+     let bg = document.getElementById("bg");
+     let moon = document.getElementById("moon");
+     let  mountain = document.getElementById("mountain");
+     let road = document.getElementById("road");
+     let text1  = document.getElementById("text1");
+     
+     window.addEventListener('scroll', function(){
+         let value = window.scrollY;
+         bg.style.top = value * 0.5 + 'px';
+         moon.style.left = -value * 0.5 + 'px';
+         mountain.style.top = -value * 0.15 + 'px';
+         road.style.top = value * 0.15 + 'px';
+         text1.style.top = value * 1 + 'px';
+         
+         
+     })
+     
+     
+     
+    </script>
+       </div> 
+</body>
+</html>
